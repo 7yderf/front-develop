@@ -30,6 +30,7 @@
     "@nuxtjs/robots": "^3.0.0",
     "@pinia/nuxt": "^0.4.7",
     "@popperjs/core": "^2.11.6",
+    "@tanstack/vue-query": "^5.67.1",
     "@vee-validate/rules": "^4.7.4",
     "@vuepic/vue-datepicker": "^11.0.1",
     "bootstrap": "^5.2.3",

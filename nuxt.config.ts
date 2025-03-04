@@ -56,10 +56,6 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         '/',
-        '/about',
-        '/services',
-        '/legales/[tab]',
-        '/SingIn',
       ],
     },
   },
