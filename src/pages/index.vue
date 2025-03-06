@@ -3,11 +3,13 @@
   <div class="body">
     <main class="home">
       <p>Hola mundo</p>
+      <div>{{ data }}</div>
     </main>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { useQuery } from '@tanstack/vue-query'
 // import { hasPermissionTo } from '@/utils/JwtService'
 import storeDevice from '~/stores/StoreDevice'
 
@@ -32,6 +34,15 @@ const animationScroll = () => {
     })
   })
 }
+
+const fetcher = async () =>
+  await fetch('https://jsonplaceholder.typicode.com/posts').then((response) =>
+    response.json(),
+  )
+
+const { data, suspense } = useQuery({ queryKey: ['test'], queryFn: fetcher })
+
+await suspense()
 
 definePageMeta({
   middleware: 'observer-nav',
