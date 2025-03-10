@@ -42,6 +42,12 @@
           :title="card.name"
           :description="card.description"
         />
+        <global-services-card
+          v-if="type === 'services'"
+          :img="card.img"
+          :title="card.title"
+          :description="card.description"
+        />
         <global-sellers-detail-card
           v-if="type === 'vendors'"
           :id="card.id"

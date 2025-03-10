@@ -40,9 +40,11 @@ const from: string = 'sellers'
         :img-src="`${img}`"
       />
     </div>
-    <h6 class="v-card__title">
-      {{ title }}
-    </h6>
+    <main-paragraph
+      class="v-card__title"
+      :class="`${from}__title`"
+      :title="{ h6: title }"
+    />
   </div>
 </template>
 

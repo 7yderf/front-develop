@@ -50,9 +50,11 @@ const deleteSeller = (id:any) => {
         :img-src="`https://www.grupotorresinmobiliario.com/back${img}`"
       />
     </div>
-    <h6 class="v-card__title mt-4">
-      {{ title }}
-    </h6>
+    <main-paragraph
+      class="v-card__title mt-4"
+      :class="`${from}__title`"
+      :title="{ h6: title }"
+    />
     <div class="v-card__actions">
       <button
         class="v-card__actions-edit"

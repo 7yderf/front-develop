@@ -39,13 +39,11 @@ defineProps<{
       :position="backSrc?.position"
     />
     <section class="banner__hero-section">
-      <div
-        class="banner__hero-txt-box"
-        :class="from"
-      >
-        <h4>{{ textContent?.title }}</h4>
-        <p>{{ textContent?.description }}</p>
-      </div>
+      <main-paragraph
+        :styles="{ titleDirection: 'center', tilteTypeColor: 'binary', textTypeColor: 'binary' }"
+        :title="{ h3: textContent?.title, h5: textContent?.description }"
+        :from="from"
+      />
       <div
         v-if="actions"
         class="banner__hero-actions container box"

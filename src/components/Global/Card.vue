@@ -10,18 +10,20 @@ defineProps<{
 <template>
   <div class="v-card">
     <div class="v-card__hover-description">
-      <p
-        class="v-card__description-text">
-        {{ description }}
-      </p>
+      <main-paragraph
+        class="v-card__description-text"
+        :text="[description]"
+        :styles="{ textTypeColor: 'binary' }"
+      />
     </div>
     <global-background-src
       :img-src="img"
     />
-    <h6
-      class="v-card__title">
-      {{ title }}
-    </h6>
+    <main-paragraph
+      class="v-card__title"
+      :title="{ h6: title }"
+      :styles="{ tilteTypeColor: 'binary' }"
+    />
   </div>
 </template>
 
@@ -53,7 +55,7 @@ defineProps<{
     padding: 16px;
     transform: translateY(60%);
     background-color: rgba(89, 131, 252, 0);
-    background-image: linear-gradient(180deg, rgba(89, 131, 252, 0) 0%, rgba(41, 56, 49, 0.43) 33%, rgba(41, 56, 49, 1) 100%);
+background-image: linear-gradient(180deg, rgba(89, 131, 252, 0) 0%, rgba(41, 56, 49, 0.43) 33%, rgba(41, 56, 49, 1) 100%);
     transition: 0.5s;
     z-index: 0;
     #{$root}__description-text{

@@ -20,7 +20,15 @@ const from = 'partners'
       :blur="true"
       :background="'#FFF'"
     />
-    <h4 class="m-auto">Manejamos varios tipos de Créditos</h4>
+    <main-paragraph
+      :styles="{
+        alignItem: 'center',
+        titleDirection: 'center',
+        gap: '16px',
+      }"
+      :title="{ h4: 'Manejamos varios tipos de Créditos' }"
+      :is-title="true"
+    />
     <div class="box partners__box w-100">
       <global-icon-text
         v-for="(item, index) in data"

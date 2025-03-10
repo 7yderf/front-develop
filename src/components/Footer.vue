@@ -13,27 +13,68 @@
 
       </div>
       <div class="footer__legal-box pb-2">
-        <h6>Contacto</h6>
-        <p> C. Octava # 588 Int 7 Plaza Lozano Zona Centro 22800, Ensenada B.C </p>
-        <p> (646) 156 02 36/646 193 20 43/(664) 2963616 </p>
-        <p>contacto@grupotorresinmobiliario.com</p>
-        <p>No. Licencia Inmobiliaria : Ens20160006</p>
+        <main-paragraph
+          :class="`${from}__item`"
+          :styles="{
+            titleDirection: 'left',
+            tilteTypeColor: 'binary',
+            textTypeColor: 'binary',
+            alignItem: 'flex-start',
+          }"
+          :title="{ h6: 'Contacto' }"
+          :text="[
+            'C. Octava # 588 Int 7 Plaza Lozano Zona Centro 22800, Ensenada B.C',
+            '(646) 156 02 36/646 193 20 43/(664) 2963616',
+            'contacto@grupotorresinmobiliario.com',
+            'No. Licencia Inmobiliaria : Ens20160006',
+          ]"
+        />
+
       </div>
       <div class="footer__legal-box pb-2">
-        <h6>Sucursales</h6>
-        <p> Tijuana - Prol Paseo de los Heroes 13186-interior 1, 20 de Noviembre, 22100 Tijuana, B.C. </p>
-        <p> Tel: 6646045106 </p>
-        <p> Los Mochis Sinaloa - Calle Morus Rubra #2065 Fracciónamiento Jardines del bosque cp 81248 Los Mochis Sinaloa </p>
-        <p> Tel: 668 100 0712 </p>
+        <main-paragraph
+          :class="`${from}__item`"
+          :styles="{
+            titleDirection: 'left',
+            tilteTypeColor: 'binary',
+            textTypeColor: 'binary',
+            alignItem: 'flex-start',
+          }"
+          :title="{ h6: 'Sucursales' }"
+          :text="[
+            'Tijuana - Prol Paseo de los Heroes 13186-interior 1, 20 de Noviembre, 22100 Tijuana, B.C.',
+            'Tel: 6646045106',
+            'Los Mochis Sinaloa - Calle Morus Rubra #2065 Fracciónamiento Jardines del bosque cp 81248 Los Mochis Sinaloa',
+            'Tel: 668 100 0712',
+          ]"
+        />
+
       </div>
       <div class="footer__legal-box pb-2">
-        <h6>Horarios</h6>
-        <p>Grupo Torres Inmobiliario inicio sus actividades en operaciones y servicios inmobiliarias en junio del año 2015. En su inicio de operaciones contábamos en este equipo con personas nuevas en el ramo de los bienes raíces, pero con mucha actitud hacia esta nueva faceta en su vida</p>
+        <main-paragraph
+          :class="`${from}__item`"
+          :styles="{
+            titleDirection: 'left',
+            tilteTypeColor: 'binary',
+            textTypeColor: 'binary',
+            alignItem: 'flex-start',
+          }"
+          :title="{ h6: 'Sobre Nosotros' }"
+          :text="[
+            'Grupo Torres Inmobiliario inicio sus actividades en operaciones y servicios inmobiliarias en junio del año 2015. En su inicio de operaciones contábamos en este equipo con personas nuevas en el ramo de los bienes raíces, pero con mucha actitud hacia esta nueva faceta en su vida',
+          ]"
+        />
       </div>
     </div>
     <article class="footer__copyright-box w-100">
       <div class="footer__copyright container">
-        <p>© 2024 Grupo Torres Inmobiliario</p>
+        <main-paragraph
+          :styles="{
+            alignItem: 'flex-start',
+            textTypeColor: 'binary',
+          }"
+          :text="['© 2024 Grupo Torres Inmobiliario']"
+        />
         <div class="box footer__legales">
           <global-icon-text
             v-for="(legal, index) in legales"

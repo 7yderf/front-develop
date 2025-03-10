@@ -1,0 +1,36 @@
+.detail{
+  @include for-size(desktop-xbig) {}
+  @include for-size(desktop-big) {}
+  @include for-size(desktop-mid) {}
+  @include for-size(desktop) {}
+  @include for-size(desktop-mid) {
+    &__map-box{
+      flex-direction: column;
+    }
+  }
+  @include for-size(tablet-landscape) {
+    &__body-box{
+      flex-direction: column;
+    }
+    &__map{
+      flex-direction: column;
+    }
+  }
+  @include for-size(tablet-portrait) {
+   
+  }
+  @include for-size(tablet-small) {
+   
+  }
+  @include for-size(phone-xbig) {
+    &__more-info{
+      flex-direction: column;
+        justify-content: flex-start;
+        gap: 32px;
+        align-items: flex-start;
+    }
+  }
+  @include for-size(phone-big) {}
+  @include for-size(phone-mid) {}
+  @include for-size(phone) {}
+}

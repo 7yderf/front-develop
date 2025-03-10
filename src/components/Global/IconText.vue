@@ -5,16 +5,16 @@ defineProps<{
  imgSrc?: string,
  text?: String,
  title?: String,
- styles?: { [key: string]: string},
- from?: string,
- link?: { to: string, text: string, target?: string}
+ styles?: { [key: string]: string}
+ from?: string
+  link?: { to: string, text: string, target?: string}
 }>()
 
 </script>
 <template>
   <div
-    class="icon-text"
     :data-title="!!title && !styles?.flexDirection"
+    class="icon-text"
     :data-from="from"
     :style="{
       '--align-items': styles?.alignItems || 'center',
@@ -36,7 +36,7 @@ defineProps<{
     />
     <div
       class="icon-text__box"
-      :data-type-color="styles?.textTypeColor || ''"
+      :data-type-color="styles?.textTypeColor || false"
     >
       <h6 v-if="title">
         {{ title }}
@@ -59,7 +59,7 @@ defineProps<{
 @import "@/assets/scss/Mixins";
 .icon-text{
 //configuración inicial *NO BORRAR*
-  @include flex(var(--justify-content), var(--gap), var(--align-items));
+@include flex(var(--justify-content), var(--gap), var(--align-items));
   flex-direction: var(--flex-direction);
   &[data-title="true"]{
    align-items: flex-start;
@@ -87,13 +87,34 @@ defineProps<{
     }
   }
   // custom *dependera de la variavle from*
+  &[data-from="home"]{
+    gap: 24px;
+    img{
+      width: 50px;
+      height: 50px;
+    }
+    h6{
+      @include text(2.4rem, 700, 3rem, left);
+    }
+  }
 }
 .home{
   &__contact-item{
-    margin-bottom: 8px;
     img{
       width: 60px;
       height: 60px;
+    }
+  }
+  &__contact-box-list{
+    @include flex(
+      flex-start,
+      16px,
+      flex-start
+    );
+    flex-direction: column;
+    margin-top: 40px;
+    h6{
+      @include text(2.4rem, 700, 3rem, left);
     }
   }
 }

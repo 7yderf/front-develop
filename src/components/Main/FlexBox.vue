@@ -57,27 +57,10 @@ defineProps<{
     &__contact-section{
       flex-direction: column;
     }
-    &__contact-left{
-      max-width: inherit;
-    }
-    &__contact-right{
-      max-width: inherit;
-    }
   }
 }
 
-.home{
-  @include for-size('tablet-landscape'){
-    &__contact{
-      .flex-box__contact-right{
-        margin: auto;
-        margin-top: 16px;
-      }
-    }
-  }
-}
-
-.home2{
+.about{
   &__vision {
     min-height: 500px;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
@@ -93,6 +76,17 @@ defineProps<{
       .flex-box__contact-right{
         min-height: 250px;
         max-width: inherit;
+      }
+    }
+  }
+}
+
+.home{
+  @include for-size('tablet-landscape'){
+    &__contact{
+      .flex-box__contact-right{
+        margin: auto;
+        margin-top: 16px;
       }
     }
   }
