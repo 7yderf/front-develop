@@ -51,13 +51,19 @@ definePageMeta({
 })
 
 onMounted(async () => {
-  // if (process.client) {
-  //   hasPermissionTo('editar:profile')
-  // }
-  animationScroll()
-
-  load.value = false
+  setTimeout(() => {
+    // mounted.value = true
+    load.value = false
+  }, 100)
 })
+
+// onUnmounted(() => {
+//   window.removeEventListener('scroll', animationScroll)
+//   setTimeout(() => {
+//     load.value = false
+//     console.log('🚀 ~ setTimeout ~ load.value:', load.value)
+//   }, 100)
+// })
 
 </script>
 <style lang="scss" scoped>

@@ -5,7 +5,7 @@
   <div
     v-if="load"
     :disabled="false"
-    class="lodaer__body"
+    class="loader__body"
   >
     <span class="loader" />
   </div>
@@ -75,4 +75,5 @@ onMounted(async () => {
 </script>
 <style lang="scss">
 @import "@/assets/scss/navbar";
+@import "@/assets/scss/loader";
 </style>

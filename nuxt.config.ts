@@ -50,7 +50,7 @@ export default defineNuxtConfig({
     dirs: ['./stores'],
   },
   build: {
-    transpile: ['swiper'],
+    transpile: ['swiper', '@vuepic/vue-datepicker'],
   },
   nitro: {
     prerender: {
