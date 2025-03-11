@@ -5,13 +5,13 @@ useHead({
   titleTemplate: title => (title ? `${title} - Grupo torres ` : 'Grupo torres'),
 })
 
-if (process.client) {
-  // const { setUser } = store
-  // const user = localStorage.getItem('user')
-  // if (user) {
-  //   setUser(JSON.parse(user))
-  // }
-}
+// if (process.client) {
+//   const { setUser } = store
+//   const user = localStorage.getItem('user')
+//   if (user) {
+//     setUser(JSON.parse(user))
+//   }
+// }
 </script>
 <template>
   <div>
@@ -20,3 +20,4 @@ if (process.client) {
     </NuxtLayout>
   </div>
 </template>
+ 

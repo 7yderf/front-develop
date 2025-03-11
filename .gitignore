@@ -6,7 +6,5 @@
 dist
 .output
 .DS_Store
-front-develop
-canvas
 php-local.ini
 node_modules
