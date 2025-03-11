@@ -1,15 +1,8 @@
 // escuchar el cambio de ruta y la procedencia de la ruta
-const storB = useFilters()
-
-const {
-  cleanFilters, cleanProductsList,
-} = storB
 
 export default defineNuxtRouteMiddleware((to, from, next) => {
   console.log('🚀 ~ file: observerNav.js:4 ~ defineNuxtRouteMiddleware ~ to:', to)
   const load = useload()
-  cleanFilters()
-  cleanProductsList()
   load.value = true
 
   console.log('🚀 ~ file: observerNav.js:4 ~ defineNuxtRouteMiddleware ~ to:', load.value)
